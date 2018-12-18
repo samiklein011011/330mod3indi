@@ -1,0 +1,14 @@
+mysql> SELECT students.id, students.email_address, AVG(grades.grade)
+    -> FROM students 
+    -> INNER JOIN grades
+    -> ON students.id = grades.student_id
+    -> WHERE students.first_name='Jack' AND students.last_name = 'Johnson';
++-----+------------------------------+-------------------+
+| id  | email_address                | AVG(grades.grade) |
++-----+------------------------------+-------------------+
+| 257 | jjmuzak@brushfirerecords.com |         96.125000 |
++-----+------------------------------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> 
+
